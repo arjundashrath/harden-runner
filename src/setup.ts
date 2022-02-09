@@ -52,10 +52,14 @@ import {verifyChecksum} from "./checksum"
       );
     }
 
-    if (confg.send_insights !== 'true' && confg.send_insights !== 'false') {
-      core.warning("send-insights must be either true or false");
+    if (confg.send_insights !== true && confg.send_insights !== false) {
+      core.setFailed("send-insights must be either true or false");
     }
-
+    
+    if (confg.send_insights === false) {
+      core.warning("not sending insights to agent api");
+    }
+    
     const confgStr = JSON.stringify(confg);
     cp.execSync("sudo mkdir -p /home/agent");
     cp.execSync("sudo chown -R $USER /home/agent");
