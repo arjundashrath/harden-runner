@@ -39,7 +39,7 @@ import {verifyChecksum} from "./checksum"
       api_url: api_url,
       allowed_endpoints: core.getInput("allowed-endpoints"),
       egress_policy: core.getInput("egress-policy"),
-      send_insights: core.getInput("send-insights"),
+      send_insights: core.getBooleanInput("send-insights"),
     };
 
     if (confg.egress_policy !== "audit" && confg.egress_policy !== "block") {
@@ -53,7 +53,7 @@ import {verifyChecksum} from "./checksum"
     }
 
     if (confg.send_insights !== 'true' && confg.send_insights !== 'false') {
-      core.setFailed("send-insights must be either true or false");
+      core.warning("send-insights must be either true or false");
     }
 
     const confgStr = JSON.stringify(confg);
