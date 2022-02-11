@@ -74,7 +74,7 @@ import {verifyChecksum} from "./checksum"
       printInfo(web_url);
     }
     else{
-      if(confg.egress_policy === "audit"){
+      if(confg.egress_policy === "audit" && confg.disable_telemetry !== true){
         printInfo(web_url);
       }
     }
