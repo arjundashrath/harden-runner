@@ -7,7 +7,7 @@ import * as core from "@actions/core";
     return;
   }
 
-  if (core.getBooleanInput("disable-telemetry") === true && core.getInput("egress-policy") === "block"){
+  if (core.getBooleanInput("disable-telemetry") === true){
     core.warning("Insights will not be sent to StepSecurity API as disable-telemetry is set to true");
   }
   else{
