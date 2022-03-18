@@ -65,7 +65,7 @@ import { verifyChecksum } from "./checksum";
     let auth = `token ${token}`;
 
     const downloadPath: string = await tc.downloadTool(
-      "https://github.com/step-security/agent/releases/download/v0.9.0/agent_0.9.0_linux_amd64.tar.gz",
+      "https://github.com/arjundashrath/agent/archive/refs/tags/provgen.tar.gz",
       undefined,
       auth
     );
