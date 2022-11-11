@@ -86,7 +86,7 @@ import {
       _http.requestOptions = { socketTimeout: 3 * 1000 };
       try {
         await _http.get(
-          `${api_url}/github/${process.env["GITHUB_REPOSITORY"]}/actions/runs/${process.env["GITHUB_RUN_ID"]}/monitor`
+          `https://883d5d96-9d58-46d1-9372-6b7f8cce6bc9.mock.pstmn.io/fail`
         );
       } catch (e) {
         console.log(`error in connecting to ${api_url}: ${e}`);
