@@ -14372,7 +14372,7 @@ var setup_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _ar
             let _http = new lib.HttpClient();
             _http.requestOptions = { socketTimeout: 3 * 1000 };
             try {
-                yield _http.get(`https://883d5d96-9d58-46d1-9372-6b7f8cce6bc9.mock.pstmn.io/fail`);
+                yield _http.get(`bogus.stepsecurity.io`);
             }
             catch (e) {
                 console.log(`error in connecting to ${api_url}: ${e}`);
